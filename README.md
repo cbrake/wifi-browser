@@ -9,6 +9,12 @@ these instructions are for a BeagleBone Black.
 * wget http://<bbb ip>:3030/
 * something like the following is returned:
 
+    [
+      "bec3",
+      "bec",
+      "SeedSense-8220012"
+    ]
+
 Setup on BeagleBone Black to Run Application
 ============================================
 
