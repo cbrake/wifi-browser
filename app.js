@@ -1,15 +1,32 @@
-var express = require('express');
+var express = require('express'),
+    exec = require('child_process').exec;
 
 var app = express();
 
+var wifi_networks = []
+
 app.get('/', function(req, res) {
 	var body = 'hello world';
-	res.setHeader('Content-Type', 'text/plain');
-	res.setHeader('Content-Length', body.length);
-	res.end(body);
-});
+  res.send(wifi_networks);
+})
+
+function scanForWifiNetworks() {
+  exec('iwlist wlan0 scan', function(error, stdout, stderr) {
+    wifi_networks = [];
+
+    if (error == null) {
+      stdout.split('\n').forEach(function(line) {
+        match = /ESSID:"(.*)"/.exec(line);
+        if (match) {
+          wifi_networks.push(match[1])
+        }
+      })
+    }
+    setTimeout(scanForWifiNetworks, 1000);
+  })
+}
+
+scanForWifiNetworks();
 
 app.listen(3030);
 console.log("Listening on port 3030");
-
-
