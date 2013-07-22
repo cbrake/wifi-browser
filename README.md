@@ -15,9 +15,10 @@ these instructions are for a BeagleBone Black.
       "SeedSense-8220012"
     ]
 
-Setup on BeagleBone Black to Run Application
-============================================
+Setup on BeagleBone Black
+=========================
 
+* log into BBB via serial console or ssh
 * git clone https://github.com/cbrake/wifi-browser.git
 
 To Develop on BBB
