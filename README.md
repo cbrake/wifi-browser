@@ -6,7 +6,7 @@ to a HTTP interface in JSON format.  It can be run on any Linux system, but
 these instructions are for a BeagleBone Black.
 
 * Set up BBB as described in this document
-* wget http://[bbb ip]:3030/
+* wget http://\<bbb ip\>:3030/
 * something like the following is returned:
 
 ```json
