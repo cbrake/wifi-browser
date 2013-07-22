@@ -6,7 +6,6 @@ var app = express();
 var wifi_networks = []
 
 app.get('/', function(req, res) {
-	var body = 'hello world';
   res.send(wifi_networks);
 })
 
