@@ -13,7 +13,7 @@ these instructions are for a BeagleBone Black.
 [
   "bec3",
   "bec",
-  "SeedSense-8220012"
+  "DeviceX-8220012"
 ]
 ```
 
