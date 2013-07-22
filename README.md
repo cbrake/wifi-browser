@@ -9,7 +9,7 @@ these instructions are for a BeagleBone Black.
 * wget http://[bbb ip]:3030/
 * something like the following is returned:
 
-```
+```json
 [
   "bec3",
   "bec",
