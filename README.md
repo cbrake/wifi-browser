@@ -18,13 +18,13 @@ these instructions are for a BeagleBone Black.
 ```
 
 Setup on BeagleBone Black
-=========================
+-------------------------
 
 * log into BBB via serial console or ssh
 * git clone https://github.com/cbrake/wifi-browser.git
 
 To Develop on BBB
-=================
+-----------------
 
 * set up ssh key
  * opkg install openssh-keygen
