@@ -21,16 +21,16 @@ Setup on BeagleBone Black
 -------------------------
 
 * update BBB to know software (this may not be required)
- * download images from:
-  * http://beagleboard.org/latest-images
-  * https://s3.amazonaws.com/angstrom/demo/beaglebone/BBB-eMMC-flasher-2013.06.20.img.xz
- * program to SD card
-  * sudo umount /dev/devicenode 
-  * sudo dd if=/path/to/downloaded.img of=/dev/devicenode bs=1M
-  * install in BBB, and boot
-  * will take 30-45m to complete -- where 4 LEDS are all blue, it is finished.
-  * remove power, remove SD card, and power on
-  * should now boot from on-board eMMC flash memory
+    * download images from:
+        * http://beagleboard.org/latest-images
+        * https://s3.amazonaws.com/angstrom/demo/beaglebone/BBB-eMMC-flasher-2013.06.20.img.xz
+    * program to SD card
+        * sudo umount /dev/devicenode 
+        * sudo dd if=/path/to/downloaded.img of=/dev/devicenode bs=1M
+        * install in BBB, and boot
+        * will take 30-45m to complete -- where 4 LEDS are all blue, it is finished.
+        * remove power, remove SD card, and power on
+        * should now boot from on-board eMMC flash memory
 * log into BBB via serial console or ssh
 * wget https://github.com/cbrake/wifi-browser/archive/master.zip
 * unzip master.zip
