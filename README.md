@@ -22,8 +22,7 @@ Setup on BeagleBone Black
 
 * update BBB to known software (this may not be required)
     * download images from:
-        * http://beagleboard.org/latest-images
-        * https://s3.amazonaws.com/angstrom/demo/beaglebone/BBB-eMMC-flasher-2013.06.20.img.xz
+        * https://s3.amazonaws.com/angstrom/demo/beaglebone/BBB-eMMC-flasher-2013.06.20.img.xz (from http://beagleboard.org/latest-images)
     * program to SD card
         * sudo umount /dev/devicenode 
         * sudo dd if=/path/to/downloaded.img of=/dev/devicenode bs=1M
