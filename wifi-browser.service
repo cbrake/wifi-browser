@@ -1,0 +1,9 @@
+[Unit]
+Description=Wifi Browser
+
+[Service]
+ExecStart=/usr/bin/node /home/root/wifi-browser-master/app.js
+
+[Install]
+WantedBy=multi-user.target
+
