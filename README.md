@@ -20,6 +20,7 @@ these instructions are for a BeagleBone Black.
 Setup on BeagleBone Black
 -------------------------
 
+* get a wifi adapter for the BBB.  This one works: http://www.adafruit.com/products/814
 * update BBB to known software (this may not be required)
     * download images from:
         * https://s3.amazonaws.com/angstrom/demo/beaglebone/BBB-eMMC-flasher-2013.06.20.img.xz (from http://beagleboard.org/latest-images)
@@ -35,6 +36,7 @@ Setup on BeagleBone Black
 * log into BBB via serial console or ssh
 * opkg update
 * opkg install wget
+* opkg install linux-firmware-rtl8192cu (required for above wifi adapter)
 * wget https://github.com/cbrake/wifi-browser/archive/master.zip
 * unzip master.zip
 * cp wifi-browser-master/wif-browser.service /lib/systemd/system/
