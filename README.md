@@ -20,7 +20,6 @@ these instructions are for a BeagleBone Black.
 Setup on BeagleBone Black
 -------------------------
 
-* log into BBB via serial console or ssh
 * update BBB to know software (this may not be required)
  * download images from:
   * http://beagleboard.org/latest-images
@@ -32,6 +31,7 @@ Setup on BeagleBone Black
   * will take 30-45m to complete -- where 4 LEDS are all blue, it is finished.
   * remove power, remove SD card, and power on
   * should now boot from on-board eMMC flash memory
+* log into BBB via serial console or ssh
 * wget https://github.com/cbrake/wifi-browser/archive/master.zip
 * unzip master.zip
 * cp wifi-browser-master/wif-browser.service /lib/systemd/system/
