@@ -32,6 +32,8 @@ Setup on BeagleBone Black
         * remove power, remove SD card, and power on
         * should now boot from on-board eMMC flash memory
 * log into BBB via serial console or ssh
+* opkg update
+* opkg install wget
 * wget https://github.com/cbrake/wifi-browser/archive/master.zip
 * unzip master.zip
 * cp wifi-browser-master/wif-browser.service /lib/systemd/system/
