@@ -24,6 +24,8 @@ Setup on BeagleBone Black
     * download images from:
         * https://s3.amazonaws.com/angstrom/demo/beaglebone/BBB-eMMC-flasher-2013.06.20.img.xz (from http://beagleboard.org/latest-images)
     * program to SD card
+        * plug SD card into Linux workstation
+        * lsblk (figure out what device node your SD card is mapped to)
         * sudo umount /dev/devicenode 
         * sudo dd if=/path/to/downloaded.img of=/dev/devicenode bs=1M
         * install in BBB, and boot
