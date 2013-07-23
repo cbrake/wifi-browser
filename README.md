@@ -28,7 +28,7 @@ Setup on BeagleBone Black
         * lsblk (figure out what device node your SD card is mapped to)
         * sudo umount /dev/devicenode 
         * sudo dd if=/path/to/downloaded.img of=/dev/devicenode bs=1M
-        * install in BBB, and boot
+        * install SD card in BBB, and power on
         * will take 30-45m to complete -- when 4 LEDS are all blue, it is finished.
         * remove power, remove SD card, and power on
         * should now boot from on-board eMMC flash memory
