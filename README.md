@@ -37,6 +37,7 @@ Setup on BeagleBone Black
 * opkg update
 * opkg install wget
 * opkg install linux-firmware-rtl8192cu (required for above wifi adapter)
+* opkg install wireless-tools
 * wget https://github.com/cbrake/wifi-browser/archive/master.zip
 * unzip master.zip
 * cp wifi-browser-master/wif-browser.service /lib/systemd/system/
