@@ -40,7 +40,7 @@ Setup on BeagleBone Black
 * opkg install wireless-tools
 * wget https://github.com/cbrake/wifi-browser/archive/master.zip
 * unzip master.zip
-* cp wifi-browser-master/wif-browser.service /lib/systemd/system/
+* cp wifi-browser-master/wifi-browser.service /lib/systemd/system/
 * systemctl --system daemon-reload
 * systemctl enable wifi-browser
 * reboot
