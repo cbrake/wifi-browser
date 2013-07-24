@@ -12,12 +12,43 @@ app.get('/', function(req, res) {
 function scanForWifiNetworks() {
   exec('iwlist wlan0 scan', function(error, stdout, stderr) {
     wifi_networks = [];
+    var cell = 0;
+    var essid = 0;
+    var quality = 0;
+    var strength = 0;
 
     if (error == null) {
       stdout.split('\n').forEach(function(line) {
-        var match = /ESSID:"(.*)"/.exec(line);
-        if (match) {
-          wifi_networks.push(match[1])
+
+        if (match = /Cell(.*)/.exec(line)) {
+          cell =  match[1];
+        }
+
+        if (match = /ESSID:"(.*)"/.exec(line)) {
+          essid = match[1];
+        }
+
+        if (match = /Quality=(.*)  Signal/.exec(line)) {
+          quality = match[1];
+        }
+
+        if (match = /Signal level=(.*)  /.exec(line)) {
+          strength = match[1];
+        }
+
+        if(cell && essid && quality && strength) {
+          var network = {};
+          network['Cell'] = cell;
+          network['ESSID'] = essid;
+          network['Quality'] = quality;
+          network['Strength'] = strength;
+
+          wifi_networks.push(network);
+
+          cell = 0;
+          essid = 0;
+          quality = 0;
+          strength = 0;
         }
       })
     }
