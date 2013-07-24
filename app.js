@@ -15,7 +15,7 @@ function scanForWifiNetworks() {
 
     if (error == null) {
       stdout.split('\n').forEach(function(line) {
-        match = /ESSID:"(.*)"/.exec(line);
+        var match = /ESSID:"(.*)"/.exec(line);
         if (match) {
           wifi_networks.push(match[1])
         }
